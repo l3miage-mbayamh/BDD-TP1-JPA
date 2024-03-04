@@ -33,14 +33,42 @@ Dans un premier temps, nous allons déclarer la classe correspondante :
 
 ```java
 public class CarEntity {
+   String immat;
+    Double cylindreCapacity;
+    Intger weigth;
+    WeightRange weightUnity;
+    Integer power;
+    PowerType powerType; 
+    LocalDate circulationDate;
+    
+     CarEntity(){}
 }
+
+enum  WeightRange{
+    KG,
+    POUND,
+    LIVRE }
+
+enum  PowerType{
+    CH,
+    CHF}
+
+
+
+
+
+
 ```
 
 * Nous allons ensuite utiliser les annotations disponibles de JPA afin de correspondre au modèle ci-dessus :
     * Nous allons rajouter l'annotation à la classe
       ```java
           @Entity
-          public class CarEntity{}
+          public class CarEntity{
+            @id
+            private String immat;
+            
+      }
       ```
 
       afin d'indiquer que cette classe correspond à une table dans la base de données.
