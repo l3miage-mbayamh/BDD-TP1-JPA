@@ -6,12 +6,13 @@ import javax.persistence.*;
 import java.math.BigInteger;
 import java.time.LocalDate;
 
-@Entity
+
 @Table(name = "netflix_user")
+@Entity
 public class NetflixUserEntity {
     @Id
     @Column(name = "id")
-    private BigInteger id;
+    private Integer id;
     @Column(name="uuid")
     private  String uuid;
     @Column(name="lastname")
