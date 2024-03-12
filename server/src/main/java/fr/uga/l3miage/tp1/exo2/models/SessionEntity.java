@@ -7,12 +7,11 @@ import java.util.UUID;
 
 @Entity
 public class SessionEntity {
-
     @Id
     private UUID idSession;
     private  String lastCommand;
     private String currentDir;
     private Boolean lock;
-    @OneToOne
+    @OneToOne(mappedBy = "User")
     private UserEntity User;
 }
