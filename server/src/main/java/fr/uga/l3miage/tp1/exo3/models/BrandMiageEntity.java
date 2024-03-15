@@ -1,9 +1,8 @@
 package fr.uga.l3miage.tp1.exo3.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import fr.uga.l3miage.tp1.exo3.models.enums.BrandType;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="brand_miage")
@@ -13,6 +12,6 @@ public class BrandMiageEntity {
     private  String siretNumber;
     @Column(name="compagny_name")
     private  String compagny_name;
-    @Column(name="type")
-    private String type;
+    @Enumerated(EnumType.STRING)
+    private BrandType type ;
 }
