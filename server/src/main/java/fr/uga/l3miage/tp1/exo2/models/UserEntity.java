@@ -14,5 +14,5 @@ private  Long idUser;
 private Boolean sso;
 private OffsetDateTime lastConnexion;
 @OneToOne
-    private SessionEntity Session;
+    private SessionEntity session;
 }

@@ -12,6 +12,6 @@ public class SessionEntity {
     private  String lastCommand;
     private String currentDir;
     private Boolean lock;
-    @OneToOne(mappedBy = "User")
-    private UserEntity User;
+    @OneToOne(mappedBy = "user")
+    private UserEntity user;
 }
