@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class NetflixUserEntity {
     @Id
     @Column(name = "id")
-    private BigInteger id;
+    private Long id;
     @Column(name="uuid")
     private  String uuid;
     @Column(name="lastname")

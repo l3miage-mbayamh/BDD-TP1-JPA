@@ -10,14 +10,15 @@ import java.math.BigInteger;
 public class NetflixAccountEntity {
     @Id
     @Column(name="id")
-    private BigInteger id;
+    private Long id;
     @Column(name="nb_devices")
     private  Integer nb_devices;
     @Column(name="typeAccount")
     @Enumerated(EnumType.STRING)
     private TypeAccount typeAccount;
 
-    @OneToOne(mappedBy = "netflixUser")
+    @OneToOne
+    @JoinColumn(name="uuid_user", referencedColumnName="uuid")
     private NetflixUserEntity netflixUser;
 
 }
