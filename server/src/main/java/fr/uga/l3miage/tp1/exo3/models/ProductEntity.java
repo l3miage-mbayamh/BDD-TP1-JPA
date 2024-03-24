@@ -9,11 +9,11 @@ import javax.persistence.ManyToOne;
 public class ProductEntity {
     @Id
     @Column(name="bar_code_number")
-    private  String bar_code_number;
+    private  String barCodeNumber;
     @Column(name = "name")
     private String name;
     @Column(name="consumable")
     private Boolean consumable;
     @ManyToOne
-    private  BrandMiageEntity BrandMiage;
+    private  BrandMiageEntity brandMiage;
 }
